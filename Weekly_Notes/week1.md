@@ -126,4 +126,29 @@ Description : Given a non-empty array nums containing only positive integers, fi
 Solution : 
 1. Notice that array contains only integers. So we only need to find set whose sum of value is target / 2 (WHICH MUST BE AN INTEGER!). We can use dp to record what we have got. DP[i] represents if i is a sum of somme elements in array. Time:O(n^2) Space:O(n)
 
+### Daily Temperatures (Leetcode 739)
+Description : Given a list of daily temperatures T, return a list such that, for each day in the input, tells you how many days you would have to wait until a warmer temperature. If there is no future day for which this is possible, put 0 instead.
+Solution :
+1. Use a stack to keep track of index of increasing sequence. From rightmost to update to leftmost.Time:O(n) Space:O(n)
+
+### Largest Plus Sign (Leetcode 764)
+Description : In a 2D grid from (0, 0) to (N-1, N-1), every cell contains a 1, except those cells in the given list mines which are 0. What is the largest axis-aligned plus sign of 1s contained in the grid? Return the order of the plus sign. If there is none, return 0.
+Solution :
+1. DP. use left[i][j], right[i][j], up[i][j] and low[i][j] keep information of max size of sequence of 1s. Time:O(n^2) Space:O(n^2)
+
+### Unique Morse Code Words (Leetcode 804)
+Description : Too easy.
+
+### Online Stock Span (Leetcode 901)
+Description : Write a class StockSpanner which collects daily price quotes for some stock, and returns the span of that stock's price for the current day. The span of the stock's price today is defined as the maximum number of consecutive days (starting from today and going backwards) for which the price of the stock was less than or equal to today's price.
+Solution :
+1. Use a vector to keep track of last element greater than current. 
+2. Use two stacks to keep track of weights and index of increasing elements. 
+
+### Validate Stack Sequences (Leetcode 946)
+Description : Given two sequences pushed and popped with distinct values, return true if and only if this could have been the result of a sequence of push and pop operations on an initially empty stack.
+1. Simulate the process. If we meet the current value in popped, we must pop it ASAP. Time: O(n) Space:O(n)
+
+### Convert Binary Number in a Linked List to Integer (Leetcode 1290)
+Description : Too easy.
 
