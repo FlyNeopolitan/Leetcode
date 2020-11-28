@@ -47,12 +47,42 @@ How many possible unique paths are there?
 Solution :
 1. Dp. Let DP[i][j] represents path from start to (i,j). Time:O(mn) Space:O(mn)
 
-###  Search a 2D Matrix（Leetcode 74)
+### Search a 2D Matrix（Leetcode 74)
 Description : Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:
 Integers in each row are sorted from left to right. The first integer of each row is greater than the last integer of the previous row.
 Solution :
 1. First use binary search finding the row it located in, and then use binary search finding the position of that raw. Time: O(logn+logm) Space:O(1)
 
-###
+### Path Sum II (Leetcode 113)
+Description : Given a binary tree and a sum, find all root-to-leaf paths where each path's sum equals the given sum.
+Solution :
+1. Recursion. Time: O(n) Space:O(n)
 
- 
+### Palindrome Partitioning II (Leetcode 132)
+Description : Given a string s, partition s such that every substring of the partition is a palindrome.Return the minimum cuts needed for a palindrome partitioning of s.
+Solution :
+1. Dp. Let dp[i] represents min cut needed from 0 to i. Now let's focus on the last palindrome containing s[i+1].... Time:O(n^2) Space:O(n)
+
+### Rotate Array (Leetcode 189)
+Description : Given an array, rotate the array to the right by k steps, where k is non-negative.
+Solution :
+1. Rotate array by 1 for k steps. Time:O(n^2) Space:O(1)
+2. Rotate array by k for 1 step. Time:O(n) Space:O(k)
+
+### Binary Tree Right Side View (Leetcode 199)
+Description : Given a binary tree, imagine yourself standing on the right side of it, return the values of the nodes you can see ordered from top to bottom.
+Solution :
+1. BFS from right to left. Time:O(n) Space:O(width(Tree))
+
+### Number of Islands (Leetcode 200)
+Description : Given an m x n 2d grid map of '1's (land) and '0's (water), return the number of islands.An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water.
+Solution :
+1. Disjoint set. Iterate the matrix, and connect the land with its neighbour land, after which the size of disjoint set equals water pixel plus island num. Time:O(n^2) Space:O(n^2)
+2. BFS/DFS. When access a part of land, use DFS or BFS to travese the whole land. (We can mark it to 0 in convenience). Time:O(n^2) Space:O(1)
+
+### Course Schedule (Leetcode 207)
+Description : There are a total of numCourses courses you have to take, labeled from 0 to numCourses-1. Some courses may have prerequisites, for example to take course 0 you have to first take course 1, which is expressed as a pair: [0,1] Given the total number of courses and a list of prerequisite pairs, is it possible for you to finish all courses?
+Solution :
+1. Everytime find the course with no prerequisite, and relex it. Time:O(n^2) Space:O(n^2)
+
+### 
