@@ -88,6 +88,21 @@ Solution :
 ### House Robber II (Leectcode 213)
 Description : You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed. All houses at this place are arranged in a circle. That means the first house is the neighbor of the last one. Meanwhile, adjacent houses have a security system connected, and it will automatically contact the police if two adjacent houses were broken into on the same night. Given a list of non-negative integers nums representing the amount of money of each house, return the maximum amount of money you can rob tonight without alerting the police.
 Solution :
-1. DP. Notice that we can not choose the first one and the last one at the same time, so we use dp1[i] represents max money from (0,i) where i<= size - 2, and use dp2[i] represents max money from (1,i) where i<= size - 1. At last we compare dp1.back() with dp2.back(). For each one, update dp[i] = max{dp[i-1], dp[i-2]+money[i]}
+1. DP. Notice that we can not choose the first one and the last one at the same time, so we use dp1[i] represents max money from (0,i) where i<= size - 2, and use dp2[i] represents max money from (1,i) where i<= size - 1. At last we compare dp1.back() with dp2.back(). For each one, update dp[i] = max{dp[i-1], dp[i-2]+money[i]} Time: O(n) Space:O(n)
 
-###
+### Maximal Square (Leetcode 221)
+Description : Given an m x n binary matrix filled with 0's and 1's, find the largest square containing only 1's and return its area.
+Solution :
+1. DP. Use left[i][j] and up[i][j] represents max 1's sequence on the left and up, and dp[i,j] represents max size whose bottomright locates in (i,j). It's easy to update left and up, after which updates DP[i,j] = min(left[i][j], up[i][j], DP[i-1,j-1]) Time: O(n^2) Space:O(n^2)
+2. DP. Use dp[i,j] represents max size whose bottomright locates in (i,j). Update DP[i][j] = min(DP[i-1][j-1], DP[i][j-1], DP[i-1][j]) Time: O(n^2) Space:O(n^2)
+
+### Rectangle Area (Leetcode 223)
+Description : Find the total area covered by two rectilinear rectangles in a 2D plane. Each rectangle is defined by its bottom left corner and top right corner as shown in the figure.
+Solution :
+1. Easy algebra. Time:O(1) Space:O(1)
+
+### Lowest Common Ancestor of a Binary Tree (Leetcode 236)
+Description : Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree.
+Solution :
+1. Find the path of p and q, and then check the last element in common path. Time:O(n) Space:O(n)
+2. Recursion. Use right, left and mid to check if two of them are true: right has one of them, left has one of them, current has one of them. Time:O(n) Space:O(n)
