@@ -106,3 +106,24 @@ Description : Given a binary tree, find the lowest common ancestor (LCA) of two 
 Solution :
 1. Find the path of p and q, and then check the last element in common path. Time:O(n) Space:O(n)
 2. Recursion. Use right, left and mid to check if two of them are true: right has one of them, left has one of them, current has one of them. Time:O(n) Space:O(n)
+
+### Product of Array Except Self (Leetcode 238)
+Description : Given an array nums of n integers where n > 1,  return an array output such that output[i] is equal to the product of all the elements of nums except nums[i].
+Solution :
+1. DP. left[i] represents product of element left of i, right[i] represents product of element right of i. Time:O(n) Space:O(n)
+2. DP. left[i] represents product of element left of i, and just from right to left update left[i] to answer with a int recording product of right elements. Time:O(n) Space:O(n)
+
+### House Robber III (Leetcode 337)
+Description : The thief has found himself a new place for his thievery again. There is only one entrance to this area, called the "root." Besides the root, each house has one and only one parent house. After a tour, the smart thief realized that "all houses in this place forms a binary tree". It will automatically contact the police if two directly-linked houses were broken into on the same night. Determine the maximum amount of money the thief can rob tonight without alerting the police.
+1. recursion. Time:O(n) Space:O(n)
+
+### Longest Substring with At Least K Repeating Characters (Leetcode 395)
+Description : Given a string s and an integer k, return the length of the longest substring of s such that the frequency of each character in this substring is greater than or equal to k.
+1. Recursion. If there is a valid element, it will devide the string into left one and right one. If there is not, then current string is legal. Time:O(n^2) Space:O(n)
+
+### Partition Equal Subset Sum (Leetcode 416)
+Description : Given a non-empty array nums containing only positive integers, find if the array can be partitioned into two subsets such that the sum of elements in both subsets is equal.
+Solution : 
+1. Notice that array contains only integers. So we only need to find set whose sum of value is target / 2 (WHICH MUST BE AN INTEGER!). We can use dp to record what we have got. DP[i] represents if i is a sum of somme elements in array. Time:O(n^2) Space:O(n)
+
+
