@@ -85,4 +85,9 @@ Description : There are a total of numCourses courses you have to take, labeled 
 Solution :
 1. Everytime find the course with no prerequisite, and relex it. Time:O(n^2) Space:O(n^2)
 
-### 
+### House Robber II (Leectcode 213)
+Description : You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed. All houses at this place are arranged in a circle. That means the first house is the neighbor of the last one. Meanwhile, adjacent houses have a security system connected, and it will automatically contact the police if two adjacent houses were broken into on the same night. Given a list of non-negative integers nums representing the amount of money of each house, return the maximum amount of money you can rob tonight without alerting the police.
+Solution :
+1. DP. Notice that we can not choose the first one and the last one at the same time, so we use dp1[i] represents max money from (0,i) where i<= size - 2, and use dp2[i] represents max money from (1,i) where i<= size - 1. At last we compare dp1.back() with dp2.back(). For each one, update dp[i] = max{dp[i-1], dp[i-2]+money[i]}
+
+###
