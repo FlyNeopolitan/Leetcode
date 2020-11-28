@@ -26,4 +26,33 @@ Description : Given a string containing just the characters '(' and ')', find th
 Solution :
 1. Dp. Let dp[i] represents longest valid parentheses substring ending at i. Time:O(n) Space:O(n)
 
+### Search in Rotated Sorted Array(Leetcode 33)
+Description : You are given an integer array nums sorted in ascending order, and an integer target. Suppose that nums is rotated at some pivot unknown to you beforehand (i.e., [0,1,2,4,5,6,7] might become [4,5,6,7,0,1,2]).
+Solution :
+1. Use binary search find the pivot, and then use binary search find the target. Time:O(logn) Space:O(1)
+
+### Wildcard Matching(Leetcode 44)
+Description : Given an input string (s) and a pattern (p), implement wildcard pattern matching with support for '?' and '*' where:'?' Matches any single character.'*' Matches any sequence of characters (including the empty sequence). The matching should cover the entire input string (not partial).
+Solution :
+1. Dp. Let dp[i][j] represents if (0,i) in p could match (0,j) in s. Time:O(nm) Space:O(nm)
+
+### Rotate Image（Leetcode 48)
+Description : You are given an n x n 2D matrix representing an image, rotate the image by 90 degrees (clockwise). You have to rotate the image in-place, which means you have to modify the input 2D matrix directly. DO NOT allocate another 2D matrix and do the rotation.
+Solution :
+1. Observe. Reverse every line. And everytime just swap the row and colomn from (i,0) to (x, n - 1 - x), from (x, n) to (x, n - 1 - x) (0 <= x <= n - 1) Time:O(n^2) Space:O(1)
+
+### Unique Paths (Leetcode 62)
+Description : A robot is located at the top-left corner of a m x n grid (marked 'Start' in the diagram below).The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner of the grid (marked 'Finish' in the diagram below).
+How many possible unique paths are there?
+Solution :
+1. Dp. Let DP[i][j] represents path from start to (i,j). Time:O(mn) Space:O(mn)
+
+###  Search a 2D Matrix（Leetcode 74)
+Description : Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:
+Integers in each row are sorted from left to right. The first integer of each row is greater than the last integer of the previous row.
+Solution :
+1. First use binary search finding the row it located in, and then use binary search finding the position of that raw. Time: O(logn+logm) Space:O(1)
+
 ###
+
+ 
