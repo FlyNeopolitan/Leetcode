@@ -27,6 +27,7 @@ The deviation of the array is the maximum difference between any two elements in
 Return the minimum deviation the array can have after performing some number of operations.  
 
 Solution: [Solution by yuezioli](https://leetcode.com/problems/minimize-deviation-in-array/discuss/952990/Mathematical-solution-reduced-complexity)
+Solution: [Solution by yanruchen](https://leetcode.com/problems/minimize-deviation-in-array/discuss/952776/python-simple-priority-queue-solution)
 
 ## Minimum Number of Removals to Make Mountain Array
 Description : You may recall that an array arr is a mountain array if and only if: arr.length >= 3; There exists some index i (0-indexed) with 0 < i < arr.length - 1 such that:
