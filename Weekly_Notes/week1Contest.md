@@ -26,7 +26,7 @@ For example, if the array is [1,2,3,4], then you can do this operation on the fi
 The deviation of the array is the maximum difference between any two elements in the array.  
 Return the minimum deviation the array can have after performing some number of operations.  
 
-Solution: [Solution by yuezioli](https://leetcode.com/problems/minimize-deviation-in-array/discuss/952990/Mathematical-solution-reduced-complexity)
+Solution: [Solution by yuezioli](https://leetcode.com/problems/minimize-deviation-in-array/discuss/952990/Mathematical-solution-reduced-complexity)  
 Solution: [Solution by yanruchen](https://leetcode.com/problems/minimize-deviation-in-array/discuss/952776/python-simple-priority-queue-solution)
 
 ## Minimum Number of Removals to Make Mountain Array
